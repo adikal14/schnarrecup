@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    rgba(22, 51, 42, 0.045) 28px
+  );
+}
+
+::selection {
+  background-color: #c1440e;
+  color: #f2ecd9;
+}
+
+.scorecard {
+  background: #f2ecd9;
+  border: 1px solid rgba(22, 51, 42, 0.18);
+  border-radius: 6px;
+  position: relative;
+}
+
+.scorecard::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(22, 51, 42, 0.22);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.stamp {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
